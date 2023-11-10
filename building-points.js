@@ -22,7 +22,7 @@ const scriptConfig = {
     en_DK: {
       'Points': 'Points',
       'GoToHeadquarters': 'Go to Headquarters and run again!',
-      'Max': 'Max',
+      'max': 'max',
     },
   },
   allowedMarkets: [],
@@ -88,7 +88,7 @@ const buildings = {
       const buildingTd = tr.firstElementChild;
       const pointsTd = document.createElement('td');
 
-      pointsTd.textContent = buildings[key][level]?.toString() ?? 'max';
+      pointsTd.textContent = buildings[key][level]?.toString() ?? tt('max');
 
       buildingTd.after(pointsTd);
     }
